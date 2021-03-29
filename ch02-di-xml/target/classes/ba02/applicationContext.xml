@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--声明学生对象-->
+    <bean id="thisIsStudent" class="com.bjpowernode.ba02.Student">
+        <property name="name" value="大飞"/>
+        <property name="age" value="44"/>
+        <!--此处进行引用类型的赋值-->
+        <property name="school" ref="thisSchool"/>
+    </bean>
+    <bean id="thisSchool" class="com.bjpowernode.ba02.School">
+        <property name="name" value="辣鸡动力节点"/>
+        <property name="add" value="浦东房价还行"/>
+    </bean>
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--声明学生对象-->
+    <!--通过byName给引用数据类型School赋值-->
+    <bean id="thisIsStudent" class="com.bjpowernode.ba04.Student" autowire="byName">
+        <property name="name" value="大飞"/>
+        <property name="age" value="44"/>
+        <!--此处进行引用类型的赋值-->
+        <!--*******引用类型的自动注入：spring根据规则可以给类中的引用类型进行赋值
+                                    在引用类型赋值时：使用自动注入
+                                    常用方式1.byName[按名称注入] 引用类型属性名 == <bean id="同名">
+                                           2.byType[按类型注入] 引用的数据类型 == <bean class="同源">
+                                             同源【同类/存在继承关系/存在接口实现关系】
+        -->
+        <!--        <property name="school" ref="thisSchool"/>-->
+    </bean>
+    <bean id="school" class="com.bjpowernode.ba04.School">
+        <property name="name" value="社会大学"/>
+        <property name="add" value="浦东房价还行"/>
+    </bean>
+</beans>

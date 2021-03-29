@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--  此文件 total表示主配置文件：包含其他的配置文件
+            主配置文件不定义对象，用来包含其他配置文件
+            <import resource="classpath:"/>
+            关键字：classpath【表示类路径：class文件所在的文件夹】
+            需要在spring的配置文件中要指定其他文他的位置，需要使用classpath，指定spring读取文件的路径
+    -->
+    <!--    此处所加载的文件列表-->
+    <!--    <import resource="classpath:ba06/spring-school.xml"/>-->
+    <!--    <import resource="classpath:ba06/spring-student.xml"/>-->
+
+    <!--    可在含有包含关系的配置文件中，可以使用通配符 *
+            注意：主配置文件不能包含在通配符的范围内【否则会造成一个读取文件的死循环器】
+            包含关系文件所属同级目录
+    -->
+    <import resource="classpath:ba06/spring-*.xml"/>
+</beans>

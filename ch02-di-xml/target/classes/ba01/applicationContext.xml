@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--声明学生对象-->
+    <bean id="thisIsStudent" class="com.bjpowernode.ba01.Student">
+        <property name="name" value="此处进行学生对象属性的赋值"/>
+        <property name="age" value="1"/>
+        <property name="email" value="搞不懂欧"/><!--很脑瘫，就是执行对应的set方法满足即可，并不进行声明的效验-->
+    </bean>
+    <bean id="date" class="java.util.Date">
+        <property name="time" value="3838438"/>
+    </bean>
+</beans>
